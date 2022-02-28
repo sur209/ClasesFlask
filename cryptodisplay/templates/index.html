@@ -1,0 +1,19 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+        <title>{{ title }}</title>
+    </head>
+    <body >
+            <h1 class='ref'>Time of refresh: <div class='time'>{{ time }}</div></h1>
+            {% for key, value in dict_prices.items() %}
+                {% if value|float <= 0.002 %}
+                <div class='price' style="color:red"><p>{{ key }}: <b>{{ value }}</b></p></div>
+                
+
+                {% else %}
+                <div class='price' style="color:black"><p>{{ key }}: <b>{{ value }}</b></p></div>
+
+                {% endif %}
+            {% endfor %}
+    </body>
+</html>
