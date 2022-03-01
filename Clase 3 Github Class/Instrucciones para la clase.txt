@@ -1,1 +1,0 @@
-- Iniciar (crear) un repositorio local nuevo: Para eso crearemos una carpeta y desde terminal ejecutaremos "git init".
